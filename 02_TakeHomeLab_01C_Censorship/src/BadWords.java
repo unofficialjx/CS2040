@@ -1,18 +1,17 @@
-
-public class BadWords  {
+public class BadWords {
     private int size;
     private Word[] badWordsArray;
 
     public BadWords(int size) {
         this.size = size;
-        this.badWordsArray = new Word[size];
+        this.badWordsArray = new Word[this.size];
     }
 
-    String compareInputWordWithBadWords(Word w) {
+    String compareInputWordWithBadWordsAndCensor(Word w) {
         for (Word bw: badWordsArray) {
 
             if (w.isBadWord(bw)) {
-                return Word.censor(w);
+                return Word.censorWord(w);
             }
         }
 
@@ -22,6 +21,5 @@ public class BadWords  {
     void addToBadWordsArray(Word w, int index){
         badWordsArray[index] = w;
     }
-
 
 }
