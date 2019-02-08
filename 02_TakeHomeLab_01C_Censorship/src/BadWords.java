@@ -1,6 +1,6 @@
 public class BadWords {
     private int size;
-    private Word[] badWordsArray;
+    Word[] badWordsArray;
 
     public BadWords(int size) {
         this.size = size;

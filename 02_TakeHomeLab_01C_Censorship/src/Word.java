@@ -1,7 +1,6 @@
 public class Word {
         private String text;
         private int wordLength;
-        private boolean _isBadWord;
 
         public Word(String text) {
             this.text = text;
@@ -11,10 +10,8 @@ public class Word {
 
         protected boolean isBadWord(Word badWord) {
             if (this.text.compareToIgnoreCase(badWord.text) == 0) {
-                _isBadWord = true;
                 return true;
             }
-            _isBadWord = false;
 
             return false;
         }

@@ -15,8 +15,9 @@ public class Story {
             System.out.print(text + " ");
         }
 
-        System.out.println( storyWords.get(storyWords.size() - 1));
-
+        Word finalWord = storyWords.get(storyWords.size() - 1);
+        String finalWordText = badWords.compareInputWordWithBadWordsAndCensor(finalWord);
+        System.out.println(finalWordText);
     }
 
 
