@@ -34,26 +34,27 @@ public class Main {
         list2.add(commonList.get(1));
         list2.add(commonList.get(2));
 
-        int startingIndexOfSubListInList1 = list1.indexOf( valueBeforeOfSubList(list1, list2) ) + 1 ;
+        int startingIndexOfSubListInList1 = list1.indexOf( valueAtStartOfSubList(list1, list2) );
         List<Integer> subList = list1.subList(startingIndexOfSubListInList1, list1.size());
 
         subList.forEach(System.out::println);
     }
 
-    public static Integer valueBeforeOfSubList(List<Integer> list1, List<Integer> list2) {
+    public static Integer valueAtStartOfSubList(List<Integer> list1, List<Integer> list2) {
         Stack<Integer> s1 = new Stack<>();
         Stack<Integer> s2 = new Stack<>();
+        int value = 0;
 
         list1.forEach(x -> s1.push(x));
         list2.forEach(x -> s2.push(x));
 
 
         while (s1.peek().equals(s2.peek())) {
-            s1.pop();
+            value = s1.pop();
             s2.pop();
         }
 
-        return s1.peek();
+        return value;
 
     }
 
