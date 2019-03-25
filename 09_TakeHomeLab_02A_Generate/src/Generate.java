@@ -44,12 +44,12 @@ public class Generate {
 		if(str.length() == 0) {
 			subSequences.add(temp);
 		} else {
+			// remove first letter each time. Then decide whether the temp wants to add the removed letter or not
 			addSubSequences(str.substring(1), temp + str.substring(0, 1));
 			addSubSequences(str.substring(1), temp);
 		}
 	}
 
-	/*
 	// i generate my own substring, eg east will generate east, eas, ea & a.
 	private void personalSubString(String inputString) {
 		if (inputString.length() <= 1) {
@@ -62,17 +62,16 @@ public class Generate {
 	}
 
 
-	private void allSubStrings(String inputString) {
+	private void allConsecutiveSubStrings(String inputString) {
 		if (inputString.length() <= 1) {
 			personalSubString(inputString);
 		} else {
 			// i generate my own
 			personalSubString(inputString);
 			// ask mySubString to generate their own, ie east will ask ast to generate his own personal substrings
-			allSubStrings(inputString.substring(1));
+			allConsecutiveSubStrings(inputString.substring(1));
 		}
 	}
-*/
 
 
 
