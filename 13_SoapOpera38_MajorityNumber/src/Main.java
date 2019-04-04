@@ -2,8 +2,6 @@ import java.util.*;
 
 public class Main {
 
-
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
@@ -20,7 +18,6 @@ public class Main {
             }
         }
 
-
         Iterator it = map.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
@@ -28,8 +25,6 @@ public class Main {
                 System.out.println("Majority number: " + pair.getKey());
             }
         }
-
-
     }
 
 }
