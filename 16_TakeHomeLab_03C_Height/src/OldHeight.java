@@ -36,8 +36,6 @@ public class OldHeight {
 
     private void run() {
         Scanner sc = new Scanner(System.in);
-
-
         int N = sc.nextInt();
         sc.nextLine();
 
